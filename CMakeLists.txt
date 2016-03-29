@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.4)
 
-### opentoonz_plugin_utilityの設定
+### link opentoonz_plugin_utility
 add_subdirectory(opentoonz_plugin_utility)
 if(WIN32)
     if(CMAKE_SIZEOF_VOID_P EQUAL 4)
@@ -30,7 +30,7 @@ include_directories(opentoonz_plugin_utility/include
                     "${OpenCV_INCLUDE_DIRS}")
 link_directories("${OpenCV_LIBS}")
 
-### プラグインのコンパイル
+### Compile plugin
 set(PLUGIN_NAME not)
 set(PLUGIN_VENDOR hiking)
 set(SOURCES
@@ -40,7 +40,7 @@ add_library(${PLUGIN_NAME} SHARED ${HEADERS} ${SOURCES} )
 
 set_target_properties(${PLUGIN_NAME} PROPERTIES
 	PREFIX "${PLUGIN_VENDOR}_"
-	SUFFIX ".plugin"
+	SUFFIX "_${CMAKE_SYSTEM_NAME}.plugin"
 	ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
 	LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
 	RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
