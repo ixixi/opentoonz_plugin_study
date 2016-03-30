@@ -32,7 +32,7 @@ link_directories("${OpenCV_LIBS}")
 
 ### Compile plugin
 set(PLUGIN_NAME not)
-set(PLUGIN_VENDOR hiking)
+set(PLUGIN_VENDOR ixixi)
 set(SOURCES
 	src/main.cpp)
 
