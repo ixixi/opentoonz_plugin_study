@@ -76,7 +76,7 @@ PluginInfo const* plugin_info() {
   static PluginInfo const info(TNZU_PP_STR(PLUGIN_NAME),    // name
                                TNZU_PP_STR(PLUGIN_VENDOR),  // vendor
                                "",                          // note
-                               "https://github.com/Hi-king/opentoonz_not");     // helpurl
+                               "https://github.com/ixixi/opentoonz_plugin_study");     // helpurl
   return &info;
 }
 
